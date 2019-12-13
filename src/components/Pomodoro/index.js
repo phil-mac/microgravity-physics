@@ -52,7 +52,7 @@ export default () => {
             <p>{min}:{sec}</p>
             <button onClick={() => setTime(1500)}>25</button>
             <button onClick={() => setTime(300)}>5</button>
-
+            <button onClick={() => setTime(3)}>3s</button>
         </div>
     )
 }

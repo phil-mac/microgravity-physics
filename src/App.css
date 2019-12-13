@@ -15,6 +15,7 @@
 
 body{
   background-color: #282c34;
+  transition: 5s;
 }
 
 .App-header {
