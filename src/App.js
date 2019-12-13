@@ -13,9 +13,8 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <h1>Welcome to MicrogravityPhysics.com</h1>
           <Navigation />
-          <hr />
+          {/* <hr /> */}
           <Route exact path={ROUTES.HOME} component={Home} />
           <Route exact path={ROUTES.POMODORO} component={Pomodoro} />
         </header>
