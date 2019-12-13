@@ -10,7 +10,7 @@ export default () => {
     const [alarm, setAlarm] = useState(false);
 
     useEffect(() => {
-        const interval = setInterval(() => {tick()}, 10);
+        const interval = setInterval(() => {tick()}, 1000);
 
         const minCalc = Math.floor(timer/60);
         const secCalc = Math.abs(timer % 60);
