@@ -10,7 +10,7 @@ export default () => {
     const [alarm, setAlarm] = useState(false);
 
     useEffect(() => {
-        const interval = setInterval(() => {tick()}, 1000);
+        const interval = setInterval(() => {tick()}, 10);
 
         const minCalc = Math.floor(timer/60);
         const secCalc = Math.abs(timer % 60);
@@ -23,7 +23,7 @@ export default () => {
             setAlarm(true);
         }
         if (timer > 0 & alarm === true){
-            document.body.style.background = 'white';
+            document.body.style.background = '#282c34';
             setAlarm(false);
         }
         if (alarm){

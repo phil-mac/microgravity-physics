@@ -1,4 +1,4 @@
-/* .App {
+.App {
   text-align: center;
 }
 
@@ -13,8 +13,11 @@
   }
 }
 
-.App-header {
+body{
   background-color: #282c34;
+}
+
+.App-header {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +38,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navItem{
+  color: white;
+}
+
+/* .active{
+  color: lightgrey;
 } */
