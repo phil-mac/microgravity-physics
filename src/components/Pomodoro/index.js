@@ -58,9 +58,9 @@ export default () => {
             <button onClick={() => setTime(1500)}>25</button>
             <button onClick={() => setTime(300)}>5</button>
             <button onClick={() => setTime(3)}>3s</button>
-
+{/* 
             <br/>
-            <button onClick={() => audio.play()}>Sound</button>
+            <button onClick={() => audio.play()}>Sound</button> */}
         </div>
     )
 }
