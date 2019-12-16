@@ -2,6 +2,10 @@ import React, {useState, useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {setTimer} from '../../actions';
 
+import beep from '../../sounds/r2d2.mp3'
+const audio = new Audio(beep);
+audio.volume = 0.1;
+
 export default () => {
     const dispatch = useDispatch();
     const timer = useSelector(state => state.timer);
@@ -20,6 +24,7 @@ export default () => {
 
         if (timer === 0 & alarm === false){
             document.body.style.background = 'red';
+            audio.play();
             setAlarm(true);
         }
         if (timer > 0 & alarm === true){
@@ -35,7 +40,7 @@ export default () => {
     }, [timer])
 
     const tick = () => {
-        console.log('tick: ' + timer);
+        // console.log('tick: ' + timer);
         dispatch(setTimer(timer - 1));
 
         
@@ -53,6 +58,9 @@ export default () => {
             <button onClick={() => setTime(1500)}>25</button>
             <button onClick={() => setTime(300)}>5</button>
             <button onClick={() => setTime(3)}>3s</button>
+
+            <br/>
+            <button onClick={() => audio.play()}>Sound</button>
         </div>
     )
 }
